@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Result</title>
+</head>
+<body>
+    <h1>Blockchain Result</h1>
+    <ul>
+        {{range .}}
+        <li>
+            <p>Time: {{.TimeStamp}}</p>
+            <p>Previous Hash: {{.PreviousBlockHash}}</p>
+            <p>Current Hash: {{.MyBlockHash}}</p>
+            <p>Data: {{.AllData}}</p>
+        </li>
+        {{end}}
+    </ul>
+
+    <button onclick="goBack()">Back</button>
+
+    <script>
+        // Function to navigate back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

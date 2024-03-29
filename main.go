@@ -17,7 +17,7 @@ var (
 
 func init() {
 	store = sessions.NewCookieStore([]byte("your-secret-key"))
-	template, err := template.ParseFS(embedFiles, "*.html")
+	template, err := template.ParseFS(embedFiles, "static/*.html")
 	templates = template
 	if err != nil {
 		log.Fatal(err)
@@ -29,15 +29,15 @@ func init() {
 
 func main() {
 	// Write embedded files to disk
-	writeFile("index.html", "index.html")
-	writeFile("result.html", "result.html")
+	writeFile("static/index.html", "static/index.html")
+	writeFile("static/result.html", "static/result.html")
 
 	newblockchain := NewBlockChain()
 
 	startWebServer(*newblockchain)
 }
 
-//go:embed index.html result.html*
+//go:embed static/index.html static/result.html*
 var embedFiles embed.FS
 
 func writeFile(filename, embedPath string) {

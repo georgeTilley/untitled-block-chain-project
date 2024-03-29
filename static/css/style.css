@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* CSS for scaling images */
+#imageContainer {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 300px; /* Set the width of the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+img {
+    max-width: 400px;
+    margin: 10px;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin-right: 10px;
+}

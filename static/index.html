@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <h1>Block chain demo</h1>
+    <form action="/submit" method="post">
+        <label for="inputText">Add to blockchain</label>
+        <input type="text" id="inputText" name="inputText">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <h1>Image training protection Demo</h1>
+    <div class="container">
+        <input type="file" id="fileInput" accept="image/*">
+        <button onclick="uploadImage()">Generate protected image</button>
+        <div id="imageContainer">
+            <img id="originalImage" src="#" alt="Original Image">
+            <img id="adversarialImage" src="#" alt="Adversarial Image">
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
